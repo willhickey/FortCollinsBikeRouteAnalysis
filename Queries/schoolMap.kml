@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+		<Placemark><name>Johnson Elementary School</name><description></description><Point><coordinates>-105.104,40.5273,0</coordinates></Point></Placemark>
+		<Placemark><name>Kruse Elementary School</name><description></description><Point><coordinates>-105.048,40.5214,0</coordinates></Point></Placemark>
+		<Placemark><name>Blevins Middle School</name><description></description><Point><coordinates>-105.115,40.5591,0</coordinates></Point></Placemark>
+		<Placemark><name>Webber Middle School</name><description></description><Point><coordinates>-105.104,40.529,0</coordinates></Point></Placemark>
+</Document>
+</kml>
