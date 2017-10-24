@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<Placemark><name>Poudre Community Academy (PCA)</name><description></description><Point><coordinates>-105.125,40.5894,0</coordinates></Point></Placemark>
+<Placemark><name>Bauder Elementary School</name><description></description><Point><coordinates>-105.122,40.5669,0</coordinates></Point></Placemark>
+<Placemark><name>Bauder Elementary School</name><description></description><Point><coordinates>-105.122,40.5669,0</coordinates></Point></Placemark>
+<Placemark><name>Bethke Elementary School</name><description></description><Point><coordinates>-104.953,40.5148,0</coordinates></Point></Placemark>
+<Placemark><name>Eyestone Elementary School</name><description></description><Point><coordinates>-105.002,40.7102,0</coordinates></Point></Placemark>
+<Placemark><name>Irish Elementary School</name><description></description><Point><coordinates>-105.122,40.594,0</coordinates></Point></Placemark>
+		<Placemark><name>Johnson Elementary School</name><description></description><Point><coordinates>-105.104,40.5273,0</coordinates></Point></Placemark>
+		<Placemark><name>Kruse Elementary School</name><description></description><Point><coordinates>-105.048,40.5214,0</coordinates></Point></Placemark>
+<Placemark><name>Lopez Elementary School</name><description></description><Point><coordinates>-105.088,40.5316,0</coordinates></Point></Placemark>
+<Placemark><name>McGraw Elementary, IB World School</name><description></description><Point><coordinates>-105.087,40.5207,0</coordinates></Point></Placemark>
+<Placemark><name>O'Dea Core Knowledge School</name><description></description><Point><coordinates>-105.072,40.5544,0</coordinates></Point></Placemark>
+<Placemark><name>Putnam Elementary School of Science</name><description></description><Point><coordinates>-105.102,40.592,0</coordinates></Point></Placemark>
+<Placemark><name>Rice Elementary School</name><description></description><Point><coordinates>-105.003,40.6867,0</coordinates></Point></Placemark>
+<Placemark><name>Riffenburgh Elementary, an IB World School</name><description></description><Point><coordinates>-105.052,40.5635,0</coordinates></Point></Placemark>
+<Placemark><name>Shepardson STEM Elementary School</name><description></description><Point><coordinates>-105.05,40.5419,0</coordinates></Point></Placemark>
+<Placemark><name>Timnath Elementary School</name><description></description><Point><coordinates>-104.984,40.5327,0</coordinates></Point></Placemark>
+		<Placemark><name>Blevins Middle School</name><description></description><Point><coordinates>-105.115,40.5591,0</coordinates></Point></Placemark>
+<Placemark><name>Boltz Middle School</name><description></description><Point><coordinates>-105.064,40.5428,0</coordinates></Point></Placemark>
+<Placemark><name>Kinard Core Knowledge Middle School</name><description></description><Point><coordinates>-105.022,40.5041,0</coordinates></Point></Placemark>
+<Placemark><name>Preston Middle School</name><description></description><Point><coordinates>-105.024,40.5186,0</coordinates></Point></Placemark>
+<Placemark><name>Wellington Middle School</name><description></description><Point><coordinates>-105.002,40.7085,0</coordinates></Point></Placemark>
+<Placemark><name>Centennial High School</name><description></description><Point><coordinates>-105.074,40.5784,0</coordinates></Point></Placemark>
+<Placemark><name>Fort Collins High School</name><description></description><Point><coordinates>-105.036,40.5403,0</coordinates></Point></Placemark>
+<Placemark><name>Beattie Elementary School</name><description></description><Point><coordinates>-105.085,40.5468,0</coordinates></Point></Placemark>
+<Placemark><name>Cache La Poudre Middle IB World School</name><description></description><Point><coordinates>-105.143,40.6274,0</coordinates></Point></Placemark>
+<Placemark><name>Bacon Elementary School</name><description></description><Point><coordinates>-105.037,40.5035,0</coordinates></Point></Placemark>
+<Placemark><name>Dunn Elementary, an IB World School</name><description></description><Point><coordinates>-105.092,40.5809,0</coordinates></Point></Placemark>
+<Placemark><name>Cache La Poudre Elementary, an IB World School</name><description></description><Point><coordinates>-105.145,40.6267,0</coordinates></Point></Placemark>
+<Placemark><name>Linton Elementary School</name><description></description><Point><coordinates>-105.031,40.5325,0</coordinates></Point></Placemark>
+<Placemark><name>Rocky Mountain High School</name><description></description><Point><coordinates>-105.1,40.5482,0</coordinates></Point></Placemark>
+<Placemark><name>Traut Core Knowledge School</name><description></description><Point><coordinates>-105.027,40.5188,0</coordinates></Point></Placemark>
+<Placemark><name>Livermore Elementary School</name><description></description><Point><coordinates>-105.222,40.7938,0</coordinates></Point></Placemark>
+<Placemark><name>Stove Prairie Elementary School</name><description></description><Point><coordinates>-105.357,40.6195,0</coordinates></Point></Placemark>
+<Placemark><name>Red Feather Lakes Elementary School</name><description></description><Point><coordinates>-105.61,40.8,0</coordinates></Point></Placemark>
+<Placemark><name>Lincoln Middle IB World School</name><description></description><Point><coordinates>-105.108,40.6,0</coordinates></Point></Placemark>
+<Placemark><name>Laurel Elementary School</name><description></description><Point><coordinates>-105.062,40.5756,0</coordinates></Point></Placemark>
+<Placemark><name>Bennett Elementary, an IB World School</name><description></description><Point><coordinates>-105.098,40.569,0</coordinates></Point></Placemark>
+<Placemark><name>Harris Bilingual Immersion School</name><description></description><Point><coordinates>-105.069,40.5735,0</coordinates></Point></Placemark>
+<Placemark><name>Zach Core Knowledge School</name><description></description><Point><coordinates>-105.007,40.5077,0</coordinates></Point></Placemark>
+<Placemark><name>Fossil Ridge High School</name><description></description><Point><coordinates>-105.02,40.5125,0</coordinates></Point></Placemark>
+<Placemark><name>Poudre High School</name><description></description><Point><coordinates>-105.121,40.5865,0</coordinates></Point></Placemark>
+<Placemark><name>Werner Elementary School</name><description></description><Point><coordinates>-105.066,40.5127,0</coordinates></Point></Placemark>
+<Placemark><name>Lesher Middle IB World School</name><description></description><Point><coordinates>-105.066,40.5681,0</coordinates></Point></Placemark>
+<Placemark><name>Tavelli Elementary School</name><description></description><Point><coordinates>-105.056,40.6157,0</coordinates></Point></Placemark>
+<Placemark><name>Olander School for Project-Based Learning</name><description></description><Point><coordinates>-105.121,40.5396,0</coordinates></Point></Placemark>
+	<Placemark><name>Webber Middle School</name><description></description><Point><coordinates>-105.104,40.529,0</coordinates></Point></Placemark>
+<Placemark><name>Polaris Expeditionary Learning School</name><description></description><Point><coordinates>-105.111,40.5776,0</coordinates></Point></Placemark>
+<Placemark><name>Polaris Expeditionary Learning School</name><description></description><Point><coordinates>-105.111,40.5776,0</coordinates></Point></Placemark>
+<Placemark><name>Polaris Expeditionary Learning School</name><description></description><Point><coordinates>-105.111,40.5776,0</coordinates></Point></Placemark>
+<Placemark><name>Liberty Common Elementary School</name><description></description><Point><coordinates>-105.03,40.5634,0</coordinates></Point></Placemark>
+<Placemark><name>Liberty Common High School</name><description></description><Point><coordinates>-105.033,40.5504,0</coordinates></Point></Placemark>
+<Placemark><name>Ridgeview Classical School</name><description></description><Point><coordinates>-105.057,40.5628,0</coordinates></Point></Placemark>
+<Placemark><name>Ridgeview Classical School</name><description></description><Point><coordinates>-105.057,40.5628,0</coordinates></Point></Placemark>
+<Placemark><name>Ridgeview Classical School</name><description></description><Point><coordinates>-105.057,40.5628,0</coordinates></Point></Placemark>
+</Document>
+</kml>

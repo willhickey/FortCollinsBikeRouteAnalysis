@@ -1,0 +1,116 @@
+SELECT TOP 100 r.id, o.latitude olatitude, o.longitude olongitude, d.latitude dlatitude, d.longitude dlongitude, r.*
+FROM route r JOIN origin o ON r.originid = o.id
+		JOIN destination d ON r.destinationid = d.id
+WHERE RawDirections IS NULL
+
+
+update route set rawdirections = null, routepolyline = null, bikedistance = null, cardistance = null
+
+select routepolyline + ',', *
+from route
+where routepolyline is not null and bikedistance < 3000 and destinationid = 11
+
+select pop2010, ageunder18, pct_u18, female, pct_fem, male, pct_male
+from CensusBlock
+
+
+declare @fc as geography
+select @fc=placemark from ftcollinsplaceboundary
+select sum(pop2010), sum(ageunder18)--, pct_u18, female, pct_fem, male, pct_male
+from censusblock cb 		
+WHERE geom.STIntersects(@fc)=1 
+
+select *
+from origin
+
+
+
+----------------------------------------------------------
+drop table #DistanceBetweenCensusBlocksAndSchools
+declare @fc as geography
+select @fc=placemark from ftcollinsplaceboundary
+
+select cb.ID CensusBlockID, d.id DestinationID, --d.name, geom.EnvelopeCenter().Lat, geom.EnvelopeCenter().Long , d.latitude, d.longitude, 
+		--abs(geom.EnvelopeCenter().Lat - d.latitude) LatDiff, abs(geom.EnvelopeCenter().Long - d.longitude) LongDiff,
+		--geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326),
+		geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326)) as DistanceToDestination
+		--min(geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326))) as DistanceToDestination
+		into #DistanceBetweenCensusBlocksAndSchools
+from censusblock cb inner join destination d on 1=1
+		
+WHERE geom.STIntersects(@fc)=1 and d.destinationTypeID = 2
+--group by cb.ID
+--order by cb.ID, geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326))
+
+
+
+select cb.ID, min(geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326))) as DistanceToDestination
+from censusblock cb inner join destination d on 1=1
+WHERE geom.STIntersects(@fc)=1
+group by cb.ID
+
+
+insert into Route (OriginID, DestinationID, Distance)
+select o.ID as OriginID, d.DestinationID as DestinationID, D.DistanceToDestination as Distance
+--select D.*
+from #DistanceBetweenCensusBlocksAndSchools D join 
+	(select censusblockid, min(distancetodestination) mindist
+	from #DistanceBetweenCensusBlocksAndSchools
+	group by censusblockid) mins
+	on d.censusblockid = mins.censusblockid and d.DistanceToDestination = mins.mindist
+	join origin o on o.censusblockid = d.censusblockid
+	
+	
+	
+	
+
+declare @fc as geography
+select @fc=placemark from ftcollinsplaceboundary
+
+insert into Origin (CensusBlockID, Latitude, Longitude)
+select ID as CenusBlockID, geom.EnvelopeCenter().Lat as Latitude, geom.EnvelopeCenter().Long as Longitude
+from censusblock cb 		
+WHERE geom.STIntersects(@fc)=1 
+
+
+select *
+from #DistanceBetweenCensusBlocksAndSchools
+order by censusblockid, distancetodestination desc
+
+select *
+from route
+where destinationid = 10
+
+select *
+from destination
+
+
+--------------------------------------
+select top 100 *
+from destination
+
+select top 10 *
+from censusblock
+
+declare @fc as geography
+select @fc=placemark from ftcollinsplaceboundary
+
+select geom.STIntersects(@fc), '<Placemark><name> ' + cast(female+male as varchar) + '</name><Point><coordinates>' + 
+		cast(geom.EnvelopeCenter().Long as varchar) + ', ' + cast(geom.EnvelopeCenter().Lat as varchar) + 
+		'</coordinates></Point> </Placemark>'
+from censusblock
+WHERE geom.STIntersects(@fc)=1
+
+
+
+declare @fc as geography
+select @fc=placemark from ftcollinsplaceboundary
+
+select cb.ID, d.name, geom.EnvelopeCenter().Lat, geom.EnvelopeCenter().Long , d.latitude, d.longitude, 
+		abs(geom.EnvelopeCenter().Lat - d.latitude) LatDiff, abs(geom.EnvelopeCenter().Long - d.longitude) LongDiff,
+		geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326),
+		geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326)) as DistanceToDestination
+from censusblock cb inner join destination d on 1=1
+WHERE geom.STIntersects(@fc)=1
+order by cb.ID, geom.EnvelopeCenter().STDistance(geography::STGeomFromText('POINT(' + cast(d.longitude as varchar) + ' ' +  cast(d.latitude as varchar) + ')', 4326))
+

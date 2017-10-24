@@ -1,0 +1,2 @@
+select '<Placemark><name>' + Name + '</name><description></description><Point><coordinates>' + cast(Longitude as varchar)+ ',' + cast(Latitude as varchar) + ',0</coordinates></Point></Placemark>'
+from destination
