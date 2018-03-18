@@ -57,6 +57,7 @@ func main() {
 		fmt.Println(" Error open db:", errdb.Error())
 	}
 
+
 	getRouteSQL := `SELECT TOP 2000 r.id, o.latitude olatitude, o.longitude olongitude, d.latitude dlatitude, d.longitude dlongitude
 			FROM route r JOIN origin o ON r.originid = o.id
 					JOIN destination d ON r.destinationid = d.id
