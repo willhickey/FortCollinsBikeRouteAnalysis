@@ -1,9 +1,29 @@
-body {
+html, body {
+	height:100%
+}
+.container {
+		height:100%;
+		width:100%;
+		margin: 0 0 0 0px;
+		max-width: 100%;
+}
+.mapRow {
+		height:100%
+}
+.titleRow {
+	padding: 10px 0px 0px 0px;
+	    text-align: center;
 
 }
-
+.textRow {
+	padding: 10px 10px 10px 10px;
+}
+.textParagraph {
+	display: inline-block;
+	padding: 0px 0px 10px 0px;
+}
 #fscaMap {
-  height: 1100px;
-	width: 1700px;
-  margin: 0px auto;
+	margin: 0em auto;
+        height:100%;
+        /*border: 2px dashed black;*/
 }

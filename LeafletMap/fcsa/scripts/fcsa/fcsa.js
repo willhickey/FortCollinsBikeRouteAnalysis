@@ -1,9 +1,9 @@
 $('document').ready(function(){
-	var mapObject = L.map('fscaMap').setView([40.585258, -105.084419], 13);	
-	
-	// uncomment additional layers from standardLayers
-	// variable to display them.
+	var mapObject = L.map('fscaMap').setView([40.555258, -105.084419], 13);	
 
+	var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	});
 	var streets = new L.esri.basemapLayer('Streets');
     var imagery= new L.esri.basemapLayer('Imagery');
     var imagelabels = new L.esri.basemapLayer('ImageryLabels');
@@ -11,17 +11,18 @@ $('document').ready(function(){
     var fullimagery = new L.layerGroup([imagery, imagelabels, imagestreets])
     var topo = new L.esri.basemapLayer('Topographic');
           
-    /*var standardLayers = [ streets, imagery, imagelabels, imagestreets, fullimagery, streets, topo];
-    _.forEach(standardLayers, function(layer){
-      layer.addTo(mapObject);
-    });*/
-	streets.addTo(mapObject);
-	//imagery.addTo(mapObject);
-	//imagelabels.addTo(mapObject);
-	//imagestreets.addTo(mapObject);
-	//fullimagery.addTo(mapObject);
-	//topo.addTo(mapObject);
+	osm.addTo(mapObject);
+	var baseMaps = {
+		"Satellite": imagery,
+		"OSM": osm
+	};
+	L.control.layers(baseMaps).addTo(mapObject);
+	var schoolTypes = {
+		"Middle": imagery,
+		"Elementary": osm
+	}
 	
+
 	// default polyline styles. additional options listed here:
 	// http://leafletjs.com/reference.html#path-options
 	var bike_route_options = {
@@ -39,5 +40,7 @@ $('document').ready(function(){
 	})
 
 	// auto-zooms map to a level where all routes show simultaneously
-	mapObject.fitBounds(bike_routes);
+	//mapObject.fitBounds(bike_routes);
+	
+	
 });
